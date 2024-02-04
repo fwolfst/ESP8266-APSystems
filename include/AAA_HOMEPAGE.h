@@ -1,3 +1,4 @@
+#include <pgmspace.h>
 
 const char ECU_HOMEPAGE[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head>

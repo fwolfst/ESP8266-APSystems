@@ -71,12 +71,12 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");
 const byte DNS_PORT = 53;
 DNSServer dnsServer;
-#include "HTML.H"
+#include "HTML.h"
 //#include "AAA_CONFIG_INVERTERS.H"
-#include "AAA_MENUPAGE.H"
-#include "AAA_HOMEPAGE.H"
-#include "PORTAL_HTML.H"
-#include "DETAILSPAGE.H"
+#include "AAA_MENUPAGE.h"
+#include "AAA_HOMEPAGE.h"
+#include "PORTAL_HTML.h"
+#include "DETAILSPAGE.h"
 //#include "ABOUT2.H"
 //#include "DIV_HTML.H"
 /*
