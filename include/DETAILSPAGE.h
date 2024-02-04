@@ -1,5 +1,5 @@
-//<script type="text/javascript" src="SECURITY"></script>
-//<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+#include <pgmspace.h>
+
 const char DETAILSPAGE [] PROGMEM = R"=====(
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/STYLESHEET_HOME"><meta charset='utf-8'><title>ESP-ECU</title>
 <style>table, th, td {border: 1px solid blue; font-size:14px; text-align:center} body {font-size:16px;} tr {height:30px;} .pol {display:none;} .close {color: red; float: right; font-size: 42px; font-weight: bold; cursor: pointer; width:70px; padding: 0px 20px;} .close:hover {color: green;} @media only screen and (max-width: 800px) { th, td { width:60px; font-size:12px; }} </style>

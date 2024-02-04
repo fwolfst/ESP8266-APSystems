@@ -1,3 +1,5 @@
+#include <pgmspace.h>
+
 const char SECURITY[] PROGMEM = R"=====(
 var message = "viewing this page is disabled!";
 function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }

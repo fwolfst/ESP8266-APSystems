@@ -1,3 +1,5 @@
+#include <pgmspace.h>
+
 const char MENUPAGE[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head><meta charset='utf-8'>
 <title>ESP-ECU</title>

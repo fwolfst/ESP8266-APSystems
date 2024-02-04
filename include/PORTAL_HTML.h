@@ -1,3 +1,5 @@
+#include <pgmspace.h>
+
 const char PORTAL_HEAD[] PROGMEM = R"=====(
 <!DOCTYPE html><html><html lang=\"en\">
 <head>
