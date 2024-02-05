@@ -1,4 +1,5 @@
 #include "SPIFFS_RW.h"
+#include "ESP-ECU.h"
 
 extern char pswd[11];
 extern char userPwd[11];
@@ -13,6 +14,10 @@ extern char Mqtt_Port[5];
 extern char Mqtt_Broker[30];
 extern char Mqtt_Password[26];
 extern char Mqtt_outTopic[26];
+extern char Mqtt_Username[26];
+extern int Mqtt_Format;
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+extern char static_ip[16];
 
 // forward decl
 bool file_open_for_read(String bestand);

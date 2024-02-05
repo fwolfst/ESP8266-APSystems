@@ -2,6 +2,8 @@
 
 #include "ZIGBEE_POLLING.h"
 
+extern bool polled[9];
+
 void polling(int which) {
       polled[which]=false; //nothing is displayed on webpage
       if(zigbeeUp == 0) 

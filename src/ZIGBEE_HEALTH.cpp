@@ -2,7 +2,7 @@
 
 extern PubSubClient MQTT_Client;
 extern int errorCode;
-uint8_t zigbeeUp;
+extern uint8_t zigbeeUp;
 extern char Mqtt_outTopic[26];
 
 //forward decl

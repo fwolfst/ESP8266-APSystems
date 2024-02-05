@@ -3,6 +3,7 @@ void testMessage() {
 char sendCmd[100];
 char s_d[254]={0};
 int len = strlen(txBuffer);
+extern bool polled[9];
 
 //DebugPrint("len of txBuffer :  "); DebugPrintln(String(txBuffer));
 

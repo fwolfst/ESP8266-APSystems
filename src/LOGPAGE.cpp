@@ -3,6 +3,9 @@
 #include <Arduino.h>
 #include <TimeLib.h>
 
+extern String toSend;
+extern bool Log_MaxReached;
+
 //
 const char HTML_LOGPAGE[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head><meta charset='utf-8'>

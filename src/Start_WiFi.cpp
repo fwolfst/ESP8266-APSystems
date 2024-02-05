@@ -3,6 +3,7 @@
 extern char passwd[11];
 extern char userPwd[11];
 extern int event;
+extern char static_ip[16];
 
 // ************************************************************************************
 // *                        START wifi

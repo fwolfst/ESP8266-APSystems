@@ -1,4 +1,16 @@
+#include <Arduino.h>
+
+#include <ESPAsyncWebServer.h>
+
+#include "ESP-ECU.h"
 #include "ZIGBEE_HELPERS.h"
+#include "ZIGBEE_POLLING.h"
+
+extern bool diagNose;
+extern AsyncWebSocket ws;
+extern char ECU_ID[13];
+extern int inverterCount;
+inverterdata Inv_Data[9];
 
 //forward decl
 /* Calculate and return the checksum of the message. */

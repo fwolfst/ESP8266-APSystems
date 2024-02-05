@@ -16,6 +16,8 @@ extern int Mqtt_Format;
 extern int t_saved[MAX_NUMBER_OF_INVERTERS];
 extern float en_saved[MAX_NUMBER_OF_INVERTERS][4];
 extern char Mqtt_outTopic[26];
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+extern inverterdata Inv_Data[9];
 
 // ******************************************************************
 //                    decode polling answer

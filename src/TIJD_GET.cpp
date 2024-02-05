@@ -1,3 +1,5 @@
+#include "LOGPAGE.h"
+
 extern bool timeRetrieved;
 extern bool zomertijd;
 extern int datum;
