@@ -1,3 +1,22 @@
+#include "SPIFFS_RW.h"
+
+extern char pswd[11];
+extern char userPwd[11];
+extern float longi;
+extern float lati;
+extern char ECU_ID[13];
+extern int pollOffset;
+extern bool Polling;
+extern int inverterCount;
+extern bool zomerTijd;
+extern char Mqtt_Port[5];
+extern char Mqtt_Broker[30];
+extern char Mqtt_Password[26];
+extern char Mqtt_outTopic[26];
+
+// forward decl
+bool file_open_for_read(String bestand);
+
 // ******************   spiffs lezen  *************************
 
 // als er geen spiffs bestand is dan moet hij eigenlijk altijd een ap openenen

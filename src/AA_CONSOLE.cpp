@@ -4,6 +4,9 @@
 
 #include <ESPAsyncWebServer.h>
 
+#include "ZIGBEE_HELPERS.h"
+#include "SPIFFS_RW.h"
+
 const char CONSOLE_HTML[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>

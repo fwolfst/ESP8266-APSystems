@@ -1,3 +1,12 @@
+#include "ZIGBEE_HELPERS.h"
+
+//forward decl
+/* Calculate and return the checksum of the message. */
+char * checkSum(char Command[]);
+
+/* Convert a char to Hex */
+int StrToHex(char str[]);
+
 // *****************************************************************************
 //                 send to zigbee radio
 // *****************************************************************************

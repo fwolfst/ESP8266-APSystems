@@ -1,4 +1,11 @@
+#include "ESP-ECU.h"
+
 extern PubSubClient MQTT_Client;
+extern char Mqtt_Clientid[26];
+extern char Mqtt_Port[5];
+extern char Mqtt_Username[26];
+extern char Mqtt_Password[26];
+extern int Mqtt_Format;
 
 /* this function checks if we are connected to the broker, if not connect anyway */  
 bool mqttConnect() {   // MQTT connection (documented way from AutoConnect : https://github.com/Hieromon/AutoConnect/tree/master/examples/mqttRSSI_NA)

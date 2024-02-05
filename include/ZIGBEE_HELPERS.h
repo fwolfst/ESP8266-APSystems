@@ -4,4 +4,8 @@
 /* Return the incoming message as a char* */
 char * readZB( char inMessage[] );
 
+/* reboot an inverter */
+void inverterReboot(int which);
+void basisConfigsave();
+
 #endif

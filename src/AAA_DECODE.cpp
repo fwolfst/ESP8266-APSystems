@@ -1,13 +1,21 @@
 #include <Arduino.h>
 
+#include <ESPAsyncWebServer.h>
+#include <PubSubClient.h>
+
 #include "ESP-ECU.h"
+
+#include "AAA_DECODE.h"
 #include "ZIGBEE_HELPERS.h"
 
 extern bool diagNose;
 extern AsyncWebSocket ws;
 extern int readCounter;
 extern PubSubClient MQTT_Client;
-
+extern int Mqtt_Format;
+extern int t_saved[MAX_NUMBER_OF_INVERTERS];
+extern float en_saved[MAX_NUMBER_OF_INVERTERS][4];
+extern char Mqtt_outTopic[26];
 
 // ******************************************************************
 //                    decode polling answer

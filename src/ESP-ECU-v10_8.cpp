@@ -233,8 +233,6 @@ char requestUrl[12] = {""}; // to remember from which webpage we came
 #define LED_UIT    HIGH
 #define knop              0  //
 #define led_onb           2  // onboard led was 2
-#define ZB_RESET          14 // D5
-#define ZB_TX             15 // D8
 
 String toSend = "";
  
@@ -279,7 +277,6 @@ void eventSend(byte what);
 void test_actionFlag();
 void eraseWifiFlash();
 void showDir();
-void empty_serial();
 
 // *****************************************************************************
 // *                              SETUP

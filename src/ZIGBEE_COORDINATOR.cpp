@@ -1,3 +1,8 @@
+#include "ZIGBEE_COORDINATOR.h"
+
+// forward decl
+void coordinator_init();
+
 /* this is a tricky process as it is hard to check if it does what it should.
  *  if brought up with sprintf constructed commands, it seems we can pair but 
  *  get no polling answers.

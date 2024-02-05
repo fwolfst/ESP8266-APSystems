@@ -1,3 +1,6 @@
+#include "ZIGBEE_POLLING.h"
+#include "ZIGBEE_COORDINATOR.h"
+
 void pairOnActionflag() {
      // we do this in the loop (outside a server request)
      //this because no delay is alowed within a async request

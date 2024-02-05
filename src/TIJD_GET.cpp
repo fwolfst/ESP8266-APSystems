@@ -1,3 +1,7 @@
+extern bool timeRetrieved;
+extern bool zomertijd;
+extern int datum;
+
 void getTijd() {
 
   timeRetrieved = false; // stays false until time is retrieved  
