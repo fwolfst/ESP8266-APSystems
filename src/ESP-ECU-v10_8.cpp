@@ -79,6 +79,21 @@ DNSServer dnsServer;
 #include "DETAILSPAGE.h"
 //#include "ABOUT2.H"
 //#include "DIV_HTML.H"
+
+#include "SPIFFS_RW.cpp"
+#include "Start_WiFi.cpp"
+#include "TIJD_GET.cpp"
+#include "LOGPAGE.cpp"
+#include "AA_CONSOLE.cpp"
+#include "AAA_DECODE.cpp"
+#include "MQTT.cpp"
+#include "ZIGBEE_HEALTH.cpp"
+#include "ZIGBEE_HELPERS.cpp"
+#include "ZIGBEE_PAIR.cpp"
+#include "ZIGBEE_COORDINATOR.cpp"
+#include "ZIGBEE_POLLING.cpp"
+#include "test.cpp"
+
 /*
  * if we define TEST we have a special environment to test the decoding of a string
  * for the different invertertypes. We only test inv0. If we set this up as a DS3
