@@ -1,3 +1,10 @@
+extern PubSubClient MQTT_Client;
+extern int errorCode;
+uint8_t zigbeeUp;
+
+//forward decl
+bool ZigbeeLoopBack()
+
 // *************************************************************************
 //                   system healtcheck 
 //**************************************************************************

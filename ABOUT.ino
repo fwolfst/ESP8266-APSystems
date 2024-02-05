@@ -1,4 +1,5 @@
-//<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+extern PubSubClient MQTT_Client;
+
 //
 const char ABOUT [] PROGMEM = R"=====(
 <!DOCTYPE html><html><head>

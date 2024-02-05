@@ -1,3 +1,14 @@
+#include <Arduino.h>
+
+#include "ESP-ECU.h"
+#include "ZIGBEE_HELPERS.h"
+
+extern bool diagNose;
+extern AsyncWebSocket ws;
+extern int readCounter;
+extern PubSubClient MQTT_Client;
+
+
 // ******************************************************************
 //                    decode polling answer
 // ******************************************************************

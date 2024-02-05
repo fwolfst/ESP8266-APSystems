@@ -1,5 +1,8 @@
-bool mqttConnect() {   // 
+extern PubSubClient MQTT_Client;
+
 /* this function checks if we are connected to the broker, if not connect anyway */  
+bool mqttConnect() {   // MQTT connection (documented way from AutoConnect : https://github.com/Hieromon/AutoConnect/tree/master/examples/mqttRSSI_NA)
+    // we are here because w'r not connected. Signal with the LED
     if( MQTT_Client.connected() ) {
     if(diagNose) ws.textAll("mqtt was connected");
     return true;

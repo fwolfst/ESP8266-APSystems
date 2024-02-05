@@ -1,3 +1,8 @@
+#include <pgmspace.h>
+
+#include <Arduino.h>
+#include <TimeLib.h>
+
 //
 const char HTML_LOGPAGE[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head><meta charset='utf-8'>

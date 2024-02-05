@@ -1,4 +1,8 @@
-//<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+#include <pgmspace.h>
+
+#include <LittleFS.h>
+
+#include <ESPAsyncWebServer.h>
 
 const char CONSOLE_HTML[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head>
@@ -136,6 +140,14 @@ function disConnect() {
 </html>
 )=====";
 
+extern char txBuffer[50];
+extern AsyncWebSocket ws;
+extern uint8_t actionFlag;
+extern int inverterCount;
+extern bool diagNose;
+extern int iKeuze;
+extern AsyncWebServer server;
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
 
 void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
   AwsFrameInfo *info = (AwsFrameInfo*)arg;

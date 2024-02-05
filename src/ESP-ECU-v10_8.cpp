@@ -71,6 +71,9 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");
 const byte DNS_PORT = 53;
 DNSServer dnsServer;
+
+#include "ESP-ECU.h"
+
 #include "HTML.h"
 //#include "AAA_CONFIG_INVERTERS.H"
 #include "AAA_MENUPAGE.h"
@@ -152,8 +155,7 @@ int testCounter = 0;
 //                             variables ECU
 // ***************************************************************************
 // ZIGBEE_globals
-#define CC2530_MAX_SERIAL_BUFFER_SIZE 512
-#define MAX_NUMBER_OF_INVERTERS 9
+
 //char inMessage[CC2530_MAX_SERIAL_BUFFER_SIZE] = {0};
 int readCounter = 0;
 
@@ -269,6 +271,15 @@ bool polled[9]; //={false,false,false,false,false,false,false,false,false};
 
 bool getallTrigger = false;
 bool reloadTrigger = false;
+
+// Forward decl
+void read_eeprom();
+void poll_all();
+void eventSend(byte what);
+void test_actionFlag();
+void eraseWifiFlash();
+void showDir();
+void empty_serial();
 
 // *****************************************************************************
 // *                              SETUP
