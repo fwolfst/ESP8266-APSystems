@@ -1,3 +1,22 @@
+#include <pgmspace.h>
+
+#include <ESPAsyncWebServer.h>
+#include <LittleFS.h>
+
+#include "AAA_INVERTERS.h"
+#include "ESP-ECU.h"
+#include "SPIFFS_RW.h"
+
+extern int actionFlag;
+extern int iKeuze;
+extern int inverterCount;
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+extern String toSend;
+
+// forward decl
+void remove_gaps();
+
+
 const char INVCONFIG_START[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head><meta charset='utf-8'>
 <title>ESP-ECU</title>

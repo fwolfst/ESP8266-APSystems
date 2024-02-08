@@ -5,4 +5,6 @@
 
 void writeStruct( String whichfile, int nummer);
 
+void basisConfigsave();
+
 #endif

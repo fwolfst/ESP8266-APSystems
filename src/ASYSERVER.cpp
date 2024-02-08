@@ -2,6 +2,8 @@
 #include <ArduinoJson.h>
 
 #include "AAA_HOMEPAGE.h"
+#include "AAA_INVERTERS.h"
+
 #include "AAA_MENUPAGE.h"
 #include "DETAILSPAGE.h"
 #include "ESP-ECU.h"
