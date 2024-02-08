@@ -14,6 +14,7 @@ extern char Mqtt_Port[5];
 extern char Mqtt_Broker[30];
 extern char Mqtt_Password[26];
 extern char Mqtt_outTopic[26];
+extern char Mqtt_inTopic[11];
 extern char Mqtt_Username[26];
 extern int Mqtt_Format;
 extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];

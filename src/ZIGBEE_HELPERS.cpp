@@ -10,7 +10,8 @@ extern bool diagNose;
 extern AsyncWebSocket ws;
 extern char ECU_ID[13];
 extern int inverterCount;
-inverterdata Inv_Data[9];
+extern inverterdata Inv_Data[9];
+extern bool USB_serial;
 
 //forward decl
 /* Calculate and return the checksum of the message. */

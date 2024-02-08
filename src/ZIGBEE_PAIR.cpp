@@ -1,5 +1,9 @@
+#include <ESPAsyncWebServer.h>
+
 #include "ZIGBEE_POLLING.h"
 #include "ZIGBEE_COORDINATOR.h"
+#include "ZIGBEE_HEALTH.h"
+#include "ZIGBEE_HELPERS.h"
 
 void pairOnActionflag() {
      // we do this in the loop (outside a server request)

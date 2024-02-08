@@ -3,4 +3,6 @@
 
 void sendNO();
 
+bool coordinator(bool normal);
+
 #endif

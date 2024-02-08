@@ -28,6 +28,16 @@ typedef struct{
   float en_total = 0;
 } inverterdata;
 
+#ifdef LOG
+ typedef struct { // __cleanup__ : renamed fields to Log_ .
+  char Log_date[14] ;
+  int  Log_kind ; // zigbee, system, mqtt, pairing
+  char  Log_message[13] ;
+} logEvent;
+#endif
+
+#define Log_MaxEvents 18
+
 // HARDWARE
 
 void ledblink(int i, int wacht);

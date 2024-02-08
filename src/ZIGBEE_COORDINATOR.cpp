@@ -1,4 +1,6 @@
 #include "ZIGBEE_COORDINATOR.h"
+#include "ZIGBEE_HEALTH.h"
+#include "ZIGBEE_HELPERS.h"
 
 // forward decl
 void coordinator_init();

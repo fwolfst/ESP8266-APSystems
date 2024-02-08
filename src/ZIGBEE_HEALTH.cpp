@@ -1,9 +1,15 @@
 #include "ESP-ECU.h"
 
+#include "ZIGBEE_HEALTH.h"
+#include "ZIGBEE_HELPERS.h"
+#include "ZIGBEE_COORDINATOR.h"
+
 extern PubSubClient MQTT_Client;
 extern int errorCode;
 extern uint8_t zigbeeUp;
 extern char Mqtt_outTopic[26];
+extern int Mqtt_Format;
+extern int resetCounter;
 
 //forward decl
 bool ZigbeeLoopBack();

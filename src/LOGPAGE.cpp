@@ -3,6 +3,8 @@
 #include <Arduino.h>
 #include <TimeLib.h>
 
+#include "ESP-ECU.h"
+
 extern String toSend;
 extern bool Log_MaxReached;
 

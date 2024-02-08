@@ -7,6 +7,7 @@
 
 #include "AAA_DECODE.h"
 #include "ZIGBEE_HELPERS.h"
+#include "MQTT.h"
 
 extern bool diagNose;
 extern AsyncWebSocket ws;

@@ -72,6 +72,8 @@ NTPClient timeClient(ntpUDP, "pool.ntp.org");
 const byte DNS_PORT = 53;
 DNSServer dnsServer;
 
+#define LOG
+
 #include "ESP-ECU.h"
 
 #include "HTML.h"
@@ -110,21 +112,20 @@ DNSServer dnsServer;
  */
 //#define MEMCHECK // when defined we mqtt memory every 1 minute
 //#define TEST
-#define LOG
 #ifdef TEST
 int testCounter = 0;
 #endif
 
 ////#define DEBUG
-//#ifdef  DEBUG
-//#define DebugPrint(x)     Serial.print (x)
-//#define DebugPrintDec(x)  Serial.print (x, DEC)
-//#define DebugPrintln(x)   Serial.println (x)
-//#else
-//#define DebugPrint(x)
-//#define DebugPrintDec(x)
-//#define DebugPrintln(x)
-//#endif
+#ifdef  DEBUG
+#define DebugPrint(x)     Serial.print (x)
+#define DebugPrintDec(x)  Serial.print (x, DEC)
+#define DebugPrintln(x)   Serial.println (x)
+#else
+#define DebugPrint(x)
+#define DebugPrintDec(x)
+#define DebugPrintln(x)
+#endif
 
 //float calliBration = 1.66;
   //bool stoPPed = false;
@@ -220,20 +221,19 @@ int value = 0;
 int aantal = 0;
 int resetCounter=0;
 
+
+int domIdx = 0; // __cleanup__: No idea where this was defined otherwise
+
 // *******************************  log *************************************
 //// variables To record and display last events on the home page.
 #ifdef LOG
-#define Log_MaxEvents 18 
- 
- typedef struct {
-  char date[14] ;
-  int  kind ; // zigbee, system, mqtt, pairing
-  char  message[13] ;
-} logEvent;
-logEvent Log_Events[Log_MaxEvents];
+
+logEvent Log_EventList[Log_MaxEvents]; // __cleanup__ from LogEventList
 bool Log_MaxReached = false;
 byte logNr = 0;
 #endif
+
+
 WiFiClient espClient ;
 PubSubClient MQTT_Client(espClient) ;
 
