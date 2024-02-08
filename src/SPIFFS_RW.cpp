@@ -1,3 +1,6 @@
+#include <LittleFS.h>
+#include <ArduinoJson.h>
+
 #include "SPIFFS_RW.h"
 #include "ESP-ECU.h"
 
@@ -19,6 +22,10 @@ extern char Mqtt_Username[26];
 extern int Mqtt_Format;
 extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
 extern char static_ip[16];
+extern char gmtOffset[5];
+extern int securityLevel;
+extern char Mqtt_Clientid[26];
+extern int Mqtt_stateIDX;
 
 // forward decl
 bool file_open_for_read(String bestand);

@@ -1,3 +1,20 @@
+#include <ESPAsyncWebServer.h>
+#include <ArduinoJson.h>
+
+#include "DETAILSPAGE.h"
+#include "ESP-ECU.h"
+
+extern AsyncWebServer server;
+extern int iKeuze;
+extern char requestUrl[12];
+extern char pswd[11];
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+
+
+// forward decl
+double round2(double value);
+
+
 void start_asyserver() {
 
 server.on("/details", HTTP_GET, [](AsyncWebServerRequest *request) {

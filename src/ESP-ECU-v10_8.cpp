@@ -231,6 +231,7 @@ int domIdx = 0; // __cleanup__: No idea where this was defined otherwise
 logEvent Log_EventList[Log_MaxEvents]; // __cleanup__ from LogEventList
 bool Log_MaxReached = false;
 byte logNr = 0;
+byte Log_CurrentEvent; // __cleanup__ probably the same as logNr
 #endif
 
 

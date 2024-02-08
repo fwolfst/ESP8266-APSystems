@@ -1,4 +1,9 @@
+#include <PubSubClient.h>
+#include <ArduinoJson.h>
+#include <ESPAsyncWebServer.h>
+
 #include "ESP-ECU.h"
+#include "LOGPAGE.h"
 
 extern PubSubClient MQTT_Client;
 extern char Mqtt_Clientid[26];
@@ -6,6 +11,12 @@ extern char Mqtt_Port[5];
 extern char Mqtt_Username[26];
 extern char Mqtt_Password[26];
 extern int Mqtt_Format;
+extern bool diagNose;
+extern AsyncWebSocket ws;
+extern uint8_t actionFlag;
+extern int iKeuze;
+extern bool Polling;
+extern int inverterCount;
 
 /* this function checks if we are connected to the broker, if not connect anyway */  
 bool mqttConnect() {   // MQTT connection (documented way from AutoConnect : https://github.com/Hieromon/AutoConnect/tree/master/examples/mqttRSSI_NA)

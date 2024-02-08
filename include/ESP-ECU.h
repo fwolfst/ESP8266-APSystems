@@ -28,6 +28,8 @@ typedef struct{
   float en_total = 0;
 } inverterdata;
 
+#define LOG
+
 #ifdef LOG
  typedef struct { // __cleanup__ : renamed fields to Log_ .
   char Log_date[14] ;
@@ -46,5 +48,10 @@ void empty_serial();
 // ZIGBEE PINS
 #define ZB_RESET          14 // D5
 #define ZB_TX             15 // D8
+
+// Something, somewhere, somewhat
+
+void eventSend(byte what);
+
 
 #endif

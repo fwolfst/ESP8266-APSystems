@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 
-void Update_Log(String what, String message);
+#define LOG_TYPE_CLEAR 0
+void Update_Log(uint what, String message);
 
 #endif

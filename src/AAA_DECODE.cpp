@@ -6,6 +6,7 @@
 #include "ESP-ECU.h"
 
 #include "AAA_DECODE.h"
+#include "ASYSERVER.h"
 #include "ZIGBEE_HELPERS.h"
 #include "MQTT.h"
 
@@ -19,6 +20,8 @@ extern float en_saved[MAX_NUMBER_OF_INVERTERS][4];
 extern char Mqtt_outTopic[26];
 extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
 extern inverterdata Inv_Data[9];
+
+void consoleOut(String) {}; // __cleanup__ this came out of nowhere
 
 // ******************************************************************
 //                    decode polling answer

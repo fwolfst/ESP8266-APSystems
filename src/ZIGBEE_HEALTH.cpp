@@ -13,6 +13,7 @@ extern int resetCounter;
 
 //forward decl
 bool ZigbeeLoopBack();
+void memoryCheck();
 
 // *************************************************************************
 //                   system healtcheck 

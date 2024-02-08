@@ -4,9 +4,12 @@
 #include <TimeLib.h>
 
 #include "ESP-ECU.h"
+#include "LOGPAGE.h"
 
 extern String toSend;
 extern bool Log_MaxReached;
+extern byte Log_CurrentEvent;
+extern logEvent Log_EventList[Log_MaxEvents];
 
 //
 const char HTML_LOGPAGE[] PROGMEM = R"=====(
@@ -117,19 +120,24 @@ toSend.replace("<cont>", content);
 //request->send(200, "text/html", toSend); 
  }
 
- void Update_Log(String what, String message) {
+/**
+ * @param what 0 to clear the log, another value otherwise
+*/
+ void Update_Log(uint what, String message) {
   String nu;
         //DebugPrintln("updating the log");
-        if(what != "clear") {
+        if(what != LOG_TYPE_CLEAR) {
         nu = String(day()) + "-" + String(hour()) + ":" + String(minute()) + ":" + String(second());
         } else { 
           nu = "";
-          what = "";}
+          what = 0;
+          }
         //DebugPrint("nu = "); DebugPrintln(nu);
-        Log_EventList[Log_CurrentEvent].Log_date = nu;
+        //__cleanup__ TODO strncpy (but safe!)!
+        Log_EventList[Log_CurrentEvent].Log_date = nu.c_str(); // __cleanup__ C: this should not be done
         Log_EventList[Log_CurrentEvent].Log_kind = what;
         //Log_EventList[Log_CurrentEvent].Log_issued = who;
-        Log_EventList[Log_CurrentEvent].Log_message = message;
+        Log_EventList[Log_CurrentEvent].Log_message = message.c_str(); // __cleanup__ C: this should not be done
         Log_CurrentEvent++;
         if (Log_CurrentEvent >= Log_MaxEvents)
         {
@@ -144,7 +152,7 @@ void Clear_Log() {
       String what="";
       String message="";
             for (int i=0; i <= Log_MaxEvents; i++) {
-            Update_Log("clear", "");
+            Update_Log(LOG_TYPE_CLEAR, "");
             }
          Log_CurrentEvent = 0;//start again
          Log_MaxReached = false;     
