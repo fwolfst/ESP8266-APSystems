@@ -119,7 +119,7 @@ window.location.href='/MENU';
 // **********************************************************************************
 //                         script
 // **********************************************************************************
-
+/*
 const char INV_SCRIPT[] PROGMEM = R"=====(
 function showFunction() {
   //alert("showFunction");
@@ -147,7 +147,7 @@ function delFunction(a) {
 }
 
 )====="; 
-
+*/
 
 
 
