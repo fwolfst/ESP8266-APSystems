@@ -1,3 +1,11 @@
+#include <ESPAsyncWebServer.h>
+
+extern int securityLevel;
+extern bool Polling;
+extern int iKeuze;
+extern int inverterCount;
+extern int actionFlag;
+
 // find out if the request comes from inside the network
 //check if the first 9 characters of the router's ip ( 192.168.0 ) is in the url
 bool checkRemote(String url) {
