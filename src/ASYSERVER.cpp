@@ -1,14 +1,25 @@
 #include <ESPAsyncWebServer.h>
 #include <ArduinoJson.h>
 
+#include "AAA_HOMEPAGE.h"
+#include "AAA_MENUPAGE.h"
 #include "DETAILSPAGE.h"
 #include "ESP-ECU.h"
+#include "EXTERNAL.h"
+#include "HTML.h"
+#include "Start_WiFi.h"
+#include "ZIGBEE_HELPERS.h"
 
 extern AsyncWebServer server;
 extern int iKeuze;
 extern char requestUrl[12];
 extern char pswd[11];
 extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+extern String toSend;
+extern int actionFlag;
+
+// in progmem, does it work?
+extern const char CONSOLE_HTML[];
 
 
 // forward decl
