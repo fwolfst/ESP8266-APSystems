@@ -5,4 +5,6 @@
 
 void handleMQTTconfig(AsyncWebServerRequest *request);
 
+void zendPageMQTTconfig(AsyncWebServerRequest * request);
+
 #endif
