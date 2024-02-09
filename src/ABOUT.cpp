@@ -1,4 +1,19 @@
+#include "pgmspace.h"
+#include <PubSubClient.h>
+#include <ESPAsyncWebServer.h>
+#include <TimeLib.h>
+
 extern PubSubClient MQTT_Client;
+extern bool timeRetrieved;
+extern int dst;
+extern int Mqtt_Format;
+extern char Mqtt_Broker[30];
+extern uint8_t zigbeeUp;
+extern int errorCode;
+extern bool polled[9];
+extern int resetCounter;
+extern bool Polling;
+
 
 //
 const char ABOUT [] PROGMEM = R"=====(
