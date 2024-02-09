@@ -42,6 +42,10 @@ typedef struct{
 
 // HARDWARE
 
+#define LED_AAN    LOW   //sinc
+#define LED_UIT    HIGH
+#define led_onb           2  // onboard led was 2
+
 void ledblink(int i, int wacht);
 void empty_serial();
 

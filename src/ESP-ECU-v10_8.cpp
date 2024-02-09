@@ -210,10 +210,7 @@ char requestUrl[12] = {""}; // to remember from which webpage we came
 #ifdef MEMCHECK
   static unsigned long lastmemCheck = 0; //memory check
 #endif  
-#define LED_AAN    LOW   //sinc
-#define LED_UIT    HIGH
 #define knop              0  //
-#define led_onb           2  // onboard led was 2
 
 String toSend = "";
  
