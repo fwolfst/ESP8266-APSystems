@@ -7,6 +7,7 @@
 #include "AAA_HOMEPAGE.h"
 #include "AAA_INVERTERS.h"
 #include "AAA_MENUPAGE.h"
+#include "ABOUT.h"
 #include "CONFIG_BASIS.h"
 #include "CONFIG_IP.h"
 #include "CONFIG_GEO.h"
