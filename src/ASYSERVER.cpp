@@ -40,7 +40,7 @@ extern const char CONSOLE_HTML[];
 
 // forward decl
 double round2(double value);
-
+void confirm();
 
 void start_asyserver() {
 
