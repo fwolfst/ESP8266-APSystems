@@ -1,3 +1,16 @@
+#include <pgmspace.h>
+#include <Arduino.h>
+
+#include <ESP8266WiFi.h>
+#include <ESPAsyncWebServer.h>
+
+#include "SPIFFS_RW.h"
+#include "HTML.h"
+
+extern String toSend;
+extern char static_ip[16];
+extern int actionFlag;
+
 const char IPCONFIG[] PROGMEM = R"=====(
 <body onload='showTable()'>
 

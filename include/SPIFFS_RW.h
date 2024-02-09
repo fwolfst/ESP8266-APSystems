@@ -7,4 +7,6 @@ void writeStruct( String whichfile, int nummer);
 
 void basisConfigsave();
 
+void wifiConfigsave();
+
 #endif
