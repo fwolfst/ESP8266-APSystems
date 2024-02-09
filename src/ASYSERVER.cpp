@@ -1,5 +1,6 @@
 #include <ESPAsyncWebServer.h>
 #include <ArduinoJson.h>
+#include <LittleFS.h>
 
 #include <TimeLib.h>
 
@@ -15,9 +16,11 @@
 #include "ESP-ECU.h"
 #include "EXTERNAL.h"
 #include "HTML.h"
+#include "LOGPAGE.h"
 #include "MQTT_CONFIG.h"
 #include "Start_WiFi.h"
 #include "ZIGBEE_HELPERS.h"
+#include "ZIGBEE_PAIR.h"
 
 extern AsyncWebServer server;
 extern int iKeuze;
@@ -34,10 +37,11 @@ extern int inverterCount;
 extern bool polled[9];
 extern float en_saved[MAX_NUMBER_OF_INVERTERS][4];
 extern const char INVCONFIG_START[] PROGMEM;
+extern bool dayTime;
+extern AsyncEventSource events;
 
 // in progmem, does it work?
 extern const char CONSOLE_HTML[];
-
 
 // forward decl
 double round2(double value);

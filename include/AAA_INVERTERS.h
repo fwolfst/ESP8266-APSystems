@@ -2,6 +2,7 @@
 #define AAA_INVERTERS_H
 
 #include <pgmspace.h>
+#include "ESP-ECU.h"
 
 const char INV_SCRIPT[] PROGMEM = R"=====(
 function showFunction() {
@@ -32,5 +33,10 @@ function delFunction(a) {
 )====="; 
 
 void inverterForm();
+
+void handleInverterdel(AsyncWebServerRequest *request);
+void handleInverterconfig(AsyncWebServerRequest *request);
+
+String processor(const String& var);
 
 #endif

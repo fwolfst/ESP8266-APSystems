@@ -5,5 +5,6 @@
 
 #define LOG_TYPE_CLEAR 0
 void Update_Log(uint what, String message);
+String putList(const String& var);
 
 #endif
