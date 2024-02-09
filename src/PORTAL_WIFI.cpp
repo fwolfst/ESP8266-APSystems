@@ -1,3 +1,30 @@
+#include <Arduino.h>
+#include <LittleFS.h>
+
+#include <ESPAsyncWebServer.h>
+#include <DNSServer.h>
+
+#include "ESP-ECU.h"
+#include "Start_WiFi.h"
+#include "PORTAL_HTML.h"
+#include "SPIFFS_RW.h"
+
+extern DNSServer dnsServer;
+extern const byte DNS_PORT;
+extern AsyncWebServer server;
+extern unsigned long laatsteMeting;
+extern bool tryConnectFlag;
+extern String toSend;
+extern int networksFound;
+extern char ssid[33];
+extern char passwd[11];
+extern char pswd[11];
+extern char static_ip[16];
+extern int value;
+extern int securityLevel;
+extern char pass[64];
+extern int event;
+
 class CaptiveRequestHandler : public AsyncWebHandler {
 public:
   CaptiveRequestHandler() {}

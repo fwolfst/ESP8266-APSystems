@@ -1,3 +1,6 @@
+#ifndef HTML_H
+#define HTML_H
+
 #include <pgmspace.h>
 
 const char SECURITY[] PROGMEM = R"=====(
@@ -363,3 +366,5 @@ tr {width:94vw;}
 %rows%
 </table></center></div></body></html>
 )=====";
+
+#endif

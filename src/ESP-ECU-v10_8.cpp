@@ -205,7 +205,7 @@ char requestUrl[12] = {""}; // to remember from which webpage we came
   int datum = 0; //
 
   unsigned long previousMillis = 0;        // will store last temp was read
-  static unsigned long laatsteMeting = 0; //wordt ook bij OTA gebruikt en bij wifiportal
+  unsigned long laatsteMeting = 0; //wordt ook bij OTA gebruikt en bij wifiportal // __cleanup__ was static
   static unsigned long lastCheck = 0; //wordt ook bij OTA gebruikt en bij wifiportal
 #ifdef MEMCHECK
   static unsigned long lastmemCheck = 0; //memory check

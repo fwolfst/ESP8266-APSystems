@@ -1,6 +1,8 @@
 #include "Start_WiFi.h"
 #include "ASYSERVER.h"
 
+#include "PORTAL_WIFI.h"
+
 extern char passwd[11];
 extern char userPwd[11];
 extern int event;
