@@ -9,4 +9,6 @@ void basisConfigsave();
 
 void wifiConfigsave();
 
+void mqttConfigsave();
+
 #endif

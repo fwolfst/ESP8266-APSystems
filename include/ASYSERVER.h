@@ -3,4 +3,6 @@
 
 double round1(double value);
 
+void start_asyserver();
+
 #endif

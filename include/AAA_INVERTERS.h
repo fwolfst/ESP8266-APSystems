@@ -31,5 +31,6 @@ function delFunction(a) {
 
 )====="; 
 
+void inverterForm();
 
 #endif

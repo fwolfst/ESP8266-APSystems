@@ -1,3 +1,21 @@
+#include <pgmspace.h>
+#include <Arduino.h>
+
+#include <ESPAsyncWebServer.h>
+
+#include "HTML.h"
+#include "SPIFFS_RW.h"
+
+extern char Mqtt_outTopic[26];
+extern char Mqtt_Username[26];
+extern char Mqtt_Password[26];
+extern char Mqtt_Clientid[26];
+extern char Mqtt_Port[5];
+extern char Mqtt_Broker[30];
+extern int actionFlag;
+extern int Mqtt_stateIDX;
+extern int Mqtt_Format;
+
 const char MQTTCONFIG[] PROGMEM = R"=====(
 <body>
 <div id='msect'><div id='bo'></div>

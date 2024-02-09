@@ -1,9 +1,28 @@
 #include <ESPAsyncWebServer.h>
 
+#include "ESP-ECU.h"
+
+#include "AAA_DECODE.h"
+#include "HTML.h"
+#include "LOGPAGE.h"
+#include "SPIFFS_RW.h"
 #include "ZIGBEE_POLLING.h"
 #include "ZIGBEE_COORDINATOR.h"
 #include "ZIGBEE_HEALTH.h"
 #include "ZIGBEE_HELPERS.h"
+#include "ZIGBEE_PAIR.h"
+
+extern int iKeuze;
+extern String toSend;
+extern bool diagNose;
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+extern AsyncWebSocket ws;
+extern uint8_t actionFlag;
+extern int readCounter;
+extern char ECU_ID[13];
+
+// forward decl
+bool decodePairMessage(int which);
 
 void pairOnActionflag() {
      // we do this in the loop (outside a server request)

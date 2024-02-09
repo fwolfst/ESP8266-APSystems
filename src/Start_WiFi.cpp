@@ -1,9 +1,11 @@
 #include "Start_WiFi.h"
+#include "ASYSERVER.h"
 
 extern char passwd[11];
 extern char userPwd[11];
 extern int event;
 extern char static_ip[16];
+extern char pswd[11];
 
 // ************************************************************************************
 // *                        START wifi
