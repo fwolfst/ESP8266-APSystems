@@ -9,6 +9,7 @@
 #include "AAA_MENUPAGE.h"
 #include "CONFIG_BASIS.h"
 #include "CONFIG_IP.h"
+#include "CONFIG_GEO.h"
 #include "DETAILSPAGE.h"
 #include "ESP-ECU.h"
 #include "EXTERNAL.h"

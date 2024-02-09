@@ -1,3 +1,18 @@
+#include "pgmspace.h"
+
+#include <ESPAsyncWebServer.h>
+#include <Arduino.h>
+
+#include "CONFIG_GEO.h"
+#include "HTML.h"
+#include "SPIFFS_RW.h"
+
+extern float longi;
+extern float lati;
+extern char gmtOffset[5];
+extern bool zomerTijd;
+extern int actionFlag;
+
 const char GEOCONFIG[] PROGMEM = R"=====(
 <body>
 <div id='msect'><div id='bo'></div>
