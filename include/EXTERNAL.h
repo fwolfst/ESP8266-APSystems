@@ -7,4 +7,6 @@
 //check if the first 9 characters of the router's ip ( 192.168.0 ) is in the url
 bool checkRemote(String url) ;
 
+void handleNotFound(AsyncWebServerRequest * request);
+
 #endif

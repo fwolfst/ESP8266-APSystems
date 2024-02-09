@@ -1,3 +1,17 @@
+#include <pgmspace.h>
+
+#include <ESPAsyncWebServer.h>
+
+#include "CONFIG_BASIS.h"
+#include "HTML.h"
+#include "SPIFFS_RW.h"
+
+extern int actionFlag;
+extern char ECU_ID[13];
+extern char userPwd[11];
+extern bool Polling;
+extern int pollOffset;
+
 const char BASISCONFIG[] PROGMEM = R"=====(
 <body>
 <div id='msect'>

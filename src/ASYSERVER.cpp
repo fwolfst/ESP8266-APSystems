@@ -1,10 +1,14 @@
 #include <ESPAsyncWebServer.h>
 #include <ArduinoJson.h>
 
+#include <TimeLib.h>
+
+#include "ASYSERVER.h"
 #include "AAA_HOMEPAGE.h"
 #include "AAA_INVERTERS.h"
 
 #include "AAA_MENUPAGE.h"
+#include "CONFIG_BASIS.h"
 #include "DETAILSPAGE.h"
 #include "ESP-ECU.h"
 #include "EXTERNAL.h"
@@ -17,8 +21,15 @@ extern int iKeuze;
 extern char requestUrl[12];
 extern char pswd[11];
 extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
+extern inverterdata Inv_Data[9];
 extern String toSend;
 extern int actionFlag;
+extern time_t switchonTime;
+extern time_t switchoffTime;
+extern uint8_t zigbeeUp;
+extern int inverterCount;
+extern bool polled[9];
+extern float en_saved[MAX_NUMBER_OF_INVERTERS][4];
 
 // in progmem, does it work?
 extern const char CONSOLE_HTML[];

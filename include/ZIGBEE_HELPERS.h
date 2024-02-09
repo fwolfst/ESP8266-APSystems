@@ -10,7 +10,6 @@ void sendZB( char printString[] );
 
 /* reboot an inverter */
 void inverterReboot(int which);
-void basisConfigsave();
 
 void resetValues(bool energy, bool mustSend);
 
