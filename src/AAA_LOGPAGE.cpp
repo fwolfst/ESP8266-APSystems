@@ -1,4 +1,15 @@
+#define LOG // __cleanup__ for individual compilation
 #ifdef LOG
+
+#include <Arduino.h>
+#include <TimeLib.h>
+
+#include "ESP-ECU.h"
+#include "LOGPAGE.h"
+
+extern logEvent Log_Events[Log_MaxEvents];
+extern byte logNr;
+extern bool Log_MaxReached;
 
 // ************************************************************************************
 //                      U P D A T E    L O G
@@ -8,11 +19,11 @@
   // when the log is full we start overwriting with the first row 
         sprintf(nu,"%d-%d:%d:%d ", day(), hour(), minute(), second());
         
-        strcpy( Log_Events[logNr].date, nu );
+        strcpy( Log_Events[logNr].Log_date, nu ); // __cleaup__ renamed 
                               
-        Log_Events[logNr].kind = what;
+        Log_Events[logNr].Log_kind = what; // __cleaup__ renamed 
         
-        strcpy( Log_Events[logNr].message, message );
+        strcpy( Log_Events[logNr].Log_message, message ); // __cleaup__ renamed 
 
         logNr++;
 
@@ -44,7 +55,7 @@ String putList(const String& var)
       j--; //  this is the index of the newest record in the array
       if (j ==-1) j = Log_MaxEvents - 1; // if we are below the first index of the array ,we start at the last
    
-   switch ( Log_Events[j].kind ) {
+   switch ( Log_Events[j].Log_kind ) { // __cleanup__ renamed
       case 1:
          strncpy( temp2, "system\0",  7 ) ;
          break;
@@ -58,7 +69,7 @@ String putList(const String& var)
          strncpy( temp2, "pairing\0", 8 ) ;
         }  
       // One table line
-      sprintf(temp1,"<tr><td>%s</td><td>%s</td><td>%s</td>", Log_Events[j].date, temp2, Log_Events[j].message );
+      sprintf(temp1,"<tr><td>%s</td><td>%s</td><td>%s</td>", Log_Events[j].Log_date, temp2, Log_Events[j].Log_message ); // __cleanup__ renamed
       strcat(content, temp1);
       }
    return content;
