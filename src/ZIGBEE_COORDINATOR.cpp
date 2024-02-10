@@ -1,6 +1,16 @@
+#include <ESPAsyncWebServer.h>
+
+#include <ESP-ECU.h>
+
+#include "LOGPAGE.h"
 #include "ZIGBEE_COORDINATOR.h"
 #include "ZIGBEE_HEALTH.h"
 #include "ZIGBEE_HELPERS.h"
+
+extern bool diagNose;
+extern AsyncWebSocket ws;
+extern char ECU_ID[13];
+extern uint8_t zigbeeUp;
 
 // forward decl
 void coordinator_init();

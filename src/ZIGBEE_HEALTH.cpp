@@ -1,15 +1,26 @@
-#include "ESP-ECU.h"
+#include <PubSubClient.h>
+#include <ESPAsyncWebServer.h>
 
+#include "ESP-ECU.h"
+#include "AAA_DECODE.h"
+#include "LOGPAGE.h"
+#include "MQTT.h"
+#include "TIJD_GET.h"
 #include "ZIGBEE_HEALTH.h"
 #include "ZIGBEE_HELPERS.h"
 #include "ZIGBEE_COORDINATOR.h"
 
+extern AsyncWebSocket ws;
 extern PubSubClient MQTT_Client;
 extern int errorCode;
 extern uint8_t zigbeeUp;
 extern char Mqtt_outTopic[26];
 extern int Mqtt_Format;
 extern int resetCounter;
+extern bool diagNose;
+extern bool timeRetrieved;
+extern int inverterCount;
+extern int Mqtt_stateIDX;
 
 //forward decl
 bool ZigbeeLoopBack();

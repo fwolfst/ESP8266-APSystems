@@ -2,5 +2,6 @@
 #define ZIGBEE_HEALTH_H
 
 int checkCoordinator();
+void ZBhardReset();
 
 #endif
