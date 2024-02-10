@@ -16,7 +16,7 @@ extern String toSend;
 // forward decl
 void remove_gaps();
 
-
+/*
 const char INVCONFIG_START[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head><meta charset='utf-8'>
 <title>ESP-ECU</title>
@@ -105,6 +105,7 @@ window.location.href='/MENU';
 <script type="text/javascript" src="INVSCRIPT"></script>
 </body></html>
  )=====";
+ */
 
  const char INVERTER_GENERAL[] PROGMEM = R"=====(
 <div id='inverter0' style='display:block'>

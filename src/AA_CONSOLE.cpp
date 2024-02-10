@@ -6,12 +6,13 @@
 //#include <ESPAsyncTCP.h>
 //#include <ESP8266WiFi.h>
 
+#include "AA_CONSOLE.h"
 #include "ESP-ECU.h"
 #include "ZIGBEE_HELPERS.h"
 #include "SPIFFS_RW.h"
 
 extern int domIdx;
-
+/*
 const char CONSOLE_HTML[] PROGMEM = R"=====(
 <!DOCTYPE html><html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -147,6 +148,7 @@ function disConnect() {
 </body>
 </html>
 )=====";
+*/
 
 extern char txBuffer[50];
 extern AsyncWebSocket ws;

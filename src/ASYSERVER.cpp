@@ -8,6 +8,7 @@
 #include "AAA_HOMEPAGE.h"
 #include "AAA_INVERTERS.h"
 #include "AAA_MENUPAGE.h"
+#include "AA_CONSOLE.h"
 #include "ABOUT.h"
 #include "CONFIG_BASIS.h"
 #include "CONFIG_IP.h"
@@ -36,12 +37,12 @@ extern uint8_t zigbeeUp;
 extern int inverterCount;
 extern bool polled[9];
 extern float en_saved[MAX_NUMBER_OF_INVERTERS][4];
-extern const char INVCONFIG_START[] PROGMEM;
+//extern const char INVCONFIG_START[] PROGMEM;
 extern bool dayTime;
 extern AsyncEventSource events;
 
 // in progmem, does it work?
-extern const char CONSOLE_HTML[];
+//extern const char CONSOLE_HTML[];<
 
 // forward decl
 double round2(double value);
