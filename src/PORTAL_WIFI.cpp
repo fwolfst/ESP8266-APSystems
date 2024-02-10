@@ -27,11 +27,17 @@ extern int event;
 
 // forward decl
 void handlePortalRoot(AsyncWebServerRequest *request);
-void handlePortalForm(AsyncWebServerRequest *request);
+void handleForm(AsyncWebServerRequest *request);
 void handleConnect(AsyncWebServerRequest *request);
 void handleConfirm(AsyncWebServerRequest *request);
 void handleClose(AsyncWebServerRequest *request);
+void eraseFiles(AsyncWebServerRequest *request);
+void eraseStatic(AsyncWebServerRequest *request);
+void portalNotFound(AsyncWebServerRequest *request);
 void scanWifi();
+void wifiConnect();
+int connectWifi();
+String makeList(int aantal);
 
 class CaptiveRequestHandler : public AsyncWebHandler {
 public:
