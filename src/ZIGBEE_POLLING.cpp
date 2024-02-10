@@ -1,9 +1,17 @@
 #include "ESP-ECU.h"
 
+#include <ESPAsyncWebServer.h>
+
+#include "AAA_DECODE.h"
 #include "ZIGBEE_POLLING.h"
 #include "ZIGBEE_HELPERS.h"
 
 extern bool polled[9];
+extern uint8_t zigbeeUp;
+extern bool diagNose;
+extern AsyncWebSocket ws;
+extern int errorCode;
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
 
 void polling(int which) {
       polled[which]=false; //nothing is displayed on webpage

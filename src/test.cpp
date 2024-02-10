@@ -1,3 +1,6 @@
+#include "ZIGBEE_HELPERS.h"
+#include <Arduino.h>
+
 // this function sends a message on request via the console
 void testMessage() {
 char sendCmd[100];
@@ -23,7 +26,6 @@ extern bool polled[9];
           return;
         }       
 }
-
 
 #ifdef TEST
 void testDecode() {

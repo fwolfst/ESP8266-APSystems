@@ -2,6 +2,7 @@
 
 #include <ESPAsyncWebServer.h>
 
+#include "AAA_DECODE.h"
 #include "ESP-ECU.h"
 #include "ZIGBEE_HELPERS.h"
 #include "ZIGBEE_POLLING.h"
@@ -12,6 +13,9 @@ extern char ECU_ID[13];
 extern int inverterCount;
 extern inverterdata Inv_Data[9];
 extern bool USB_serial;
+extern int readCounter;
+extern uint8_t zigbeeUp;
+extern inverters Inv_Prop[MAX_NUMBER_OF_INVERTERS];
 
 //forward decl
 /* Calculate and return the checksum of the message. */
