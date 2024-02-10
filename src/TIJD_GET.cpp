@@ -1,13 +1,16 @@
 #include <NTPClient.h>
+#include <TimeLib.h>
 
 #include "LOGPAGE.h"
 #include "TIJD_CALC.h"
+#include <WiFiUdp.h>
 
 extern bool timeRetrieved;
-//extern bool zomertijd;
+extern bool zomerTijd;
 extern int datum;
 extern NTPClient timeClient;
 extern WiFiUDP ntpUDP;
+const char* gmtOffset = "120"; //__cleanup__ rather use one variable, but const because of atoi?
 
 void getTijd() {
 

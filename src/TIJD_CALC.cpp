@@ -2,6 +2,8 @@
 #include "sunMoon.h"
 #include "TIJD_CALC.h"
 
+// forward decl
+int dow(int y, int m, int d);
 
 extern int longi;
 extern int lati;
