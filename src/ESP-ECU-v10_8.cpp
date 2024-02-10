@@ -82,6 +82,7 @@ DNSServer dnsServer;
 #include "AAA_HOMEPAGE.h"
 #include "PORTAL_HTML.h"
 #include "DETAILSPAGE.h"
+#include "TEST.h"
 //#include "ABOUT2.H"
 //#include "DIV_HTML.H"
 
