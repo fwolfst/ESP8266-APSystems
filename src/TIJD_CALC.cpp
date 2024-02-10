@@ -1,3 +1,18 @@
+#include <TimeLib.h>
+#include "sunMoon.h"
+#include "TIJD_CALC.h"
+
+
+extern int longi;
+extern int lati;
+//extern char gmtOffset;
+const char * gmtOffset = "120"; // __cleanup__ bcs atof needs a const (?)
+extern bool zomerTijd;
+extern int dst;
+extern time_t switchonTime;
+extern time_t switchoffTime;
+extern int pollOffset;
+
 // deze functie berekent de zonsopkomst en zonsondergangstijden
 void sun_setrise() {
 

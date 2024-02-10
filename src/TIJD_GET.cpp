@@ -1,8 +1,13 @@
+#include <NTPClient.h>
+
 #include "LOGPAGE.h"
+#include "TIJD_CALC.h"
 
 extern bool timeRetrieved;
-extern bool zomertijd;
+//extern bool zomertijd;
 extern int datum;
+extern NTPClient timeClient;
+extern WiFiUDP ntpUDP;
 
 void getTijd() {
 
