@@ -57,6 +57,10 @@ void empty_serial();
 #define ZB_RESET          14 // D5
 #define ZB_TX             15 // D8
 
+// NETWORK
+
+#define DNS_PORT 53
+
 // Something, somewhere, somewhat
 
 void eventSend(byte what);

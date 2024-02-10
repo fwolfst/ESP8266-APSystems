@@ -1,6 +1,13 @@
 #include "ZIGBEE_HELPERS.h"
 #include <Arduino.h>
 
+#include <ESPAsyncWebServer.h>
+
+extern AsyncWebSocket ws;
+extern bool diagNose;
+extern char txBuffer[50];
+extern int readCounter;
+
 // this function sends a message on request via the console
 void testMessage() {
 char sendCmd[100];

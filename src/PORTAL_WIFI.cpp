@@ -10,7 +10,7 @@
 #include "SPIFFS_RW.h"
 
 extern DNSServer dnsServer;
-extern const byte DNS_PORT;
+//extern const byte DNS_PORT;
 extern AsyncWebServer server;
 extern unsigned long laatsteMeting;
 extern bool tryConnectFlag;

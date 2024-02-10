@@ -69,7 +69,7 @@ AsyncWebSocket ws("/ws");
 #include <WiFiUdp.h>
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");
-const byte DNS_PORT = 53;
+//const byte DNS_PORT = 53;
 DNSServer dnsServer;
 
 #define LOG
