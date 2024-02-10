@@ -25,6 +25,14 @@ extern int securityLevel;
 extern char pass[64];
 extern int event;
 
+// forward decl
+void handlePortalRoot(AsyncWebServerRequest *request);
+void handlePortalForm(AsyncWebServerRequest *request);
+void handleConnect(AsyncWebServerRequest *request);
+void handleConfirm(AsyncWebServerRequest *request);
+void handleClose(AsyncWebServerRequest *request);
+void scanWifi();
+
 class CaptiveRequestHandler : public AsyncWebHandler {
 public:
   CaptiveRequestHandler() {}

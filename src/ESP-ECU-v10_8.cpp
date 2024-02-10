@@ -92,6 +92,7 @@ DNSServer dnsServer;
 #include "AA_CONSOLE.cpp"
 #include "AAA_DECODE.cpp"
 #include "MQTT.cpp"
+#include "ISR.cpp"
 #include "ZIGBEE_HEALTH.cpp"
 #include "ZIGBEE_HELPERS.cpp"
 #include "ZIGBEE_PAIR.cpp"
@@ -210,7 +211,6 @@ char requestUrl[12] = {""}; // to remember from which webpage we came
 #ifdef MEMCHECK
   static unsigned long lastmemCheck = 0; //memory check
 #endif  
-#define knop              0  //
 
 String toSend = "";
  
@@ -280,7 +280,9 @@ void setup() {
   
   ledblink(1, 800);
 
+#ifdef USE_ISR_KNOB
    attachInterrupt(digitalPinToInterrupt(knop), isr, FALLING);
+#endif
 
   SPIFFS_read();
  // now we know the number of inverters we can find an interval between pollings

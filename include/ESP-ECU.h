@@ -1,6 +1,8 @@
 #ifndef ESP_ECU_H
 #define ESP_ECU_H
 
+#include <Arduino.h>
+
 // ZIGBEE
 #define CC2530_MAX_SERIAL_BUFFER_SIZE 512
 
@@ -46,6 +48,8 @@ typedef struct{
 #define LED_UIT    HIGH
 #define led_onb           2  // onboard led was 2
 
+#define knop              0  //
+
 void ledblink(int i, int wacht);
 void empty_serial();
 
@@ -56,6 +60,5 @@ void empty_serial();
 // Something, somewhere, somewhat
 
 void eventSend(byte what);
-
 
 #endif

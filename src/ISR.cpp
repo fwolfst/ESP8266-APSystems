@@ -1,3 +1,10 @@
+#ifdef USE_ISR_KNOB //__cleanup__ skip the knob
+
+// __cleanup__ no idea why and what but it fixes it
+
+#include "ESP-ECU.h"
+
+
 // *******************************************************************************************
 //                  interrupt service routine
 // *******************************************************************************************
@@ -100,3 +107,5 @@ ICACHE_RAM_ATTR void isr() {
      attachInterrupt(digitalPinToInterrupt(knop), isr, FALLING);  
  }
 }
+
+#endif
