@@ -10,7 +10,7 @@ extern bool zomerTijd;
 extern int datum;
 extern NTPClient timeClient;
 extern WiFiUDP ntpUDP;
-const char* gmtOffset = "120"; //__cleanup__ rather use one variable, but const because of atoi?
+//const char gmtOffset[] = "120"; //__cleanup__ rather use one variable, but const because of atoi?
 
 void getTijd() {
 
@@ -38,7 +38,7 @@ void getTijd() {
     return;
   } else {
    
-    epochTime += atoi(gmtOffset) * 60;
+    epochTime += atoi("120") * 60; // __cleanup__ use gmtOffset variable instead of hard coded 120
     setTime(epochTime); // dit moeten we doen omdat anders zomertijd() niet werkt
     //Serial.print("epoch gecorrigeerd voor gmtOffset = "); Serial.println(epochTime);
     if ( zomerTijd == true ) {
