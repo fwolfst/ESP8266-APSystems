@@ -134,10 +134,13 @@ toSend.replace("<cont>", content);
           }
         //DebugPrint("nu = "); DebugPrintln(nu);
         //__cleanup__ TODO strncpy (but safe!)!
-        Log_EventList[Log_CurrentEvent].Log_date = nu.c_str(); // __cleanup__ C: this should not be done
+        strncpy(Log_EventList[Log_CurrentEvent].Log_date, nu.c_str(), nu.length() + 1);
+        //Log_EventList[Log_CurrentEvent].Log_date = nu.c_str(); // __cleanup__ C: this should not be done
         Log_EventList[Log_CurrentEvent].Log_kind = what;
         //Log_EventList[Log_CurrentEvent].Log_issued = who;
-        Log_EventList[Log_CurrentEvent].Log_message = message.c_str(); // __cleanup__ C: this should not be done
+        //Log_EventList[Log_CurrentEvent].Log_message = message.c_str(); // __cleanup__ C: this should not be done
+        strncpy(Log_EventList[Log_CurrentEvent].Log_message, message.c_str(), message.length() + 1);
+        
         Log_CurrentEvent++;
         if (Log_CurrentEvent >= Log_MaxEvents)
         {
