@@ -1,3 +1,30 @@
+# ECU-ESP8266
+
+Experimental fork of [@patience4711](https://github.com/patience4711)s [read-APSystems-YC600-QS1-DS3](https://github.com/patience4711/read-APSystems-YC600-QS1-DS3/) project to read sun harvest data out of an APSystems inverter (solar power).
+
+The goal is to make it reproducibly compile with [platformIO](platformio.org) instead of the ArduinoIDE used by the original author.
+Targetted microcontroller is the ESP8266, build system is acd  Debian 12.
+
+For a blank slate implementation that does not pair yet :( see [ECU-ESP8266](https://github.com/fwolfst/ECU-ESP8266).
+
+## Lessons learnt and thoughts not finished
+
+- My C and C++ skills are rusty (at best).
+- Project layout/ app architecture for an embedded system puts different
+  spotlights then when building a web application with Ruby on Rails.
+- Still not sure about the trade-off between global state and e.g. buffers and
+  local variables.
+- I am ditching vim for platformio here, but lets see how long it'll last.
+- Will need to look into general and especially embedded conventions, e.g. https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard . Or GNU/Linux or GTK...
+- `SoftwareSerial` might help in developing and debugging (currently we throw away our possibility to debug to Serial, because that is remapped to the zigbee module). Or use `Serial1`?
+
+## License and Copyright
+
+[Unclear to me, but we are allowed to
+hack](https://github.com/patience4711/read-APSystems-YC600-QS1-DS3/issues/105).
+
+# Original README
+
 # read APS inverters
 The purpose of this project is to read data via Zigbee from APS Systems inverters. The program can pair and poll YC600 QS1 and DS3(-L-M-S verified) inverters, up to 9 pieces. The read values are displayed on a web page and sent via mosquitto in a user-defined Json format.
 The program has a lot of smart features. All settings can be done via the webinterface. It has a console that can be used for debugging and sending/receiving zigbee messages.<br>
