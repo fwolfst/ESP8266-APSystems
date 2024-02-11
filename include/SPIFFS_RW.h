@@ -11,4 +11,8 @@ void wifiConfigsave();
 
 void mqttConfigsave();
 
+void SPIFFS_read();
+
+bool leesStruct(String whichfile);
+
 #endif

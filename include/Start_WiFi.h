@@ -6,5 +6,6 @@
 
 void checkFixed();
 void loginBoth(AsyncWebServerRequest *request, String who);
+void start_wifi();
 
 #endif

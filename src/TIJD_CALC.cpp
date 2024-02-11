@@ -8,7 +8,7 @@ int dow(int y, int m, int d);
 extern int longi;
 extern int lati;
 //extern char gmtOffset;
-const char * gmtOffset = "120"; // __cleanup__ bcs atof needs a const (?)
+//const char * gmtOffset = "120"; // __cleanup__ bcs atof needs a const (?)
 extern bool zomerTijd;
 extern int dst;
 extern time_t switchonTime;
@@ -22,7 +22,8 @@ void sun_setrise() {
 //float OUR_latitude = atof(breedte);
 float OUR_longtitude = longi;
 float OUR_latitude = lati;
-float OUR_timezone = atof(gmtOffset); //   120                     // localtime with UTC difference in minutes
+// __cleanup__ fix gmtOffset
+float OUR_timezone = atof("120"); //   120                     // localtime with UTC difference in minutes
 
 sunMoon  sm;
 

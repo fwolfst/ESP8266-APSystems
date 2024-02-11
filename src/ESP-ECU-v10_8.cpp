@@ -80,12 +80,25 @@ DNSServer dnsServer;
 //#include "AAA_CONFIG_INVERTERS.H"
 #include "AAA_MENUPAGE.h"
 #include "AAA_HOMEPAGE.h"
+#include "AA_CONSOLE.h"
 #include "PORTAL_HTML.h"
 #include "DETAILSPAGE.h"
+#include "LOGPAGE.h"
+#include "MQTT.h"
+#include "SPIFFS_RW.h"
+#include "Start_WiFi.h"
 #include "TEST.h"
+#include "TIJD_GET.h"
+#include "ZIGBEE_COORDINATOR.h"
+#include "ZIGBEE_HELPERS.h"
+#include "ZIGBEE_HEALTH.h"
+#include "ZIGBEE_PAIR.h"
+#include "ZIGBEE_POLLING.h"
+
 //#include "ABOUT2.H"
 //#include "DIV_HTML.H"
 
+/*
 #include "SPIFFS_RW.cpp"
 #include "Start_WiFi.cpp"
 #include "TIJD_GET.cpp"
@@ -100,6 +113,7 @@ DNSServer dnsServer;
 #include "ZIGBEE_COORDINATOR.cpp"
 #include "ZIGBEE_POLLING.cpp"
 #include "test.cpp"
+*/
 
 /*
  * if we define TEST we have a special environment to test the decoding of a string

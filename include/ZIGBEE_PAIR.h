@@ -4,6 +4,7 @@
 #include <ESPAsyncWebServer.h>
 
 bool pairing(int which);
+void pairOnActionflag();
 void handlePair(AsyncWebServerRequest * request);
 
 #endif

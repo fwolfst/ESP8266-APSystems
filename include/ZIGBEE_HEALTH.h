@@ -3,5 +3,6 @@
 
 int checkCoordinator();
 void ZBhardReset();
+void healthCheck();
 
 #endif

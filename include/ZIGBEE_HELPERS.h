@@ -16,5 +16,6 @@ void resetValues(bool energy, bool mustSend);
 String ECU_REVERSE();
 
 void swap_to_usb();
+void swap_to_zb();
 
 #endif
